@@ -1,82 +1,41 @@
-[
   {
-    "id": "evt-0001",
-    "title": "Festival Urbano Lima 2025",
+    "id": "evt-0005",
+    "title": "Festival Furro: Noche de Garras y Ritmo",
     "category": "festival",
-    "artists": ["Rapero X", "DJ Latina", "Banda Flow"],
+    "artists": ["Sonic", "Lola Bunny", "Adam Wan"],
     "city": "Lima",
     "venue": "Estadio Nacional",
     "datetime": "2025-11-20T18:00:00-05:00",
-    "priceFrom": 150.00,
+    "priceFrom": 30.00,
     "currency": "PEN",
-    "stock": 30000,
+    "stock": 3000,
     "soldOut": false,
     "popularity": 95,
+    "images": ["imagen5.jpg"],
+    "policies": {
+      "age": "15+",
+      "refund": "No reembolsable"
+    },
+    "description": "Una noche de música, luces y diversión inspirada en la cultura furry. El evento contará con presentaciones en vivo, zonas para fotografías, concursos de cosplay, pantallas gigantes y un ambiente lleno de energía para quienes disfrutan los personajes animados y la fantasía."
+  },
+  {
+    "id": "evt-0006",
+    "title": "Concierto Otaku: Anime Music Night",
+    "category": "musica",
+    "artists": ["Kira Band", "DJ Senpai", "Voces Anime"],
+    "city": "Lima",
+    "venue": "Centro de Convenciones",
+    "datetime": "2025-12-15T18:30:00-05:00",
+    "priceFrom": 45.00,
+    "currency": "PEN",
+    "stock": 1800,
+    "soldOut": false,
+    "popularity": 92,
     "images": ["imagen1.jpg"],
     "policies": {
-      "age": "18+",
-      "refund": "No reembolsable"
-    },
-    "description": "Un festival de música urbana con artistas nacionales e internacionales, luces, pantallas gigantes y una experiencia en vivo para los amantes del reguetón, trap y rap."
-  },
-  {
-    "id": "evt-0002",
-    "title": "Concierto Acústico Bajo las Estrellas",
-    "category": "musica",
-    "artists": ["Valeria Luz", "Andrés Sol", "Grupo Aurora"],
-    "city": "Lima",
-    "venue": "Parque de la Exposición",
-    "datetime": "2025-12-05T20:00:00-05:00",
-    "priceFrom": 85.00,
-    "currency": "PEN",
-    "stock": 1200,
-    "soldOut": false,
-    "popularity": 88,
-    "images": ["imagen2.jpg"],
-    "policies": {
       "age": "Todas las edades",
-      "refund": "Reembolso hasta 48 horas antes del evento"
+      "refund": "Reembolso hasta 24 horas antes del evento"
     },
-    "description": "Un concierto al aire libre con música acústica, iluminación cálida y un ambiente tranquilo para disfrutar canciones románticas, pop latino y baladas en vivo."
-  },
-  {
-    "id": "evt-0003",
-    "title": "Noche de Stand-Up Comedy",
-    "category": "standup",
-    "artists": ["Jorge Luna", "Ricardo Mendoza"],
-    "city": "Lima",
-    "venue": "Teatro Canout",
-    "datetime": "2025-10-18T21:00:00-05:00",
-    "priceFrom": 230.00,
-    "currency": "PEN",
-    "stock": 400,
-    "soldOut": false,
-    "popularity": 80,
-    "images": ["imagen3.jpg"],
-    "policies": {
-      "age": "16+",
-      "refund": "No reembolsable"
-    },
-    "description": "Una noche de comedia en vivo con monólogos, bromas cotidianas e interacción con el público. Ideal para pasar un momento divertido con amigos."
-  },
-  {
-    "id": "evt-0004",
-    "title": "Obra de Teatro: Sombras del Pasado",
-    "category": "teatro",
-    "artists": ["Compañía Escena Viva", "Mariana Torres", "Javier Ríos"],
-    "city": "Lima",
-    "venue": "Teatro Municipal",
-    "datetime": "2025-09-15T19:30:00-05:00",
-    "priceFrom": 60.00,
-    "currency": "PEN",
-    "stock": 0,
-    "soldOut": true,
-    "popularity": 84,
-    "images": ["imagen4.jpg"],
-    "policies": {
-      "age": "12+",
-      "refund": "Reembolso hasta 72 horas antes del evento"
-    },
-    "description": "Una obra teatral dramática que presenta una historia familiar llena de secretos, recuerdos y decisiones difíciles. Cuenta con escenografía clásica y actuaciones intensas."
+    "description": "Un concierto temático para fans del anime, con openings, endings, música japonesa, concursos de cosplay, zonas fotográficas y presentaciones en vivo inspiradas en la cultura otaku."
   }
 ]

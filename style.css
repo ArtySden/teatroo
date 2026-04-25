@@ -10,10 +10,10 @@ body {
 }
 
 header {
-  background: #5b3128;
+  background: linear-gradient(135deg, #5b3128, #8d5b72);
   color: #fff7ec;
   text-align: center;
-  padding: 40px 20px;
+  padding: 38px 20px;
   border-bottom: 4px solid #c29b4b;
 }
 
@@ -23,14 +23,12 @@ header h1 {
 }
 
 header p {
-  max-width: 600px;
-  margin: 10px auto 0 auto;
+  margin-top: 8px;
   color: #f4d8b5;
-  font-size: 16px;
 }
 
 main {
-  padding: 25px 18px;
+  padding: 20px;
 }
 
 .card {
@@ -38,10 +36,10 @@ main {
   width: 100%;
   margin: 0 auto 25px auto;
   background: #fffaf0;
-  padding: 24px;
+  padding: 22px;
   border-radius: 16px;
   border: 1px solid #d6b26a;
-  box-shadow: 0 4px 14px rgba(91, 49, 40, 0.15);
+  box-shadow: 0 4px 14px rgba(91, 49, 40, 0.14);
 }
 
 .card h2,
@@ -51,28 +49,27 @@ main {
 
 .card h2 {
   color: #5b3128;
-  margin: 10px 0;
-  font-size: 28px;
-}
-
-.description {
-  max-width: 650px;
-  margin: 0 auto 22px auto;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #604236;
 }
 
 .badge {
   display: block;
   width: fit-content;
-  margin: 0 auto 14px auto;
+  margin: 0 auto 12px auto;
   background: #c29b4b;
   color: white;
   font-size: 12px;
   font-weight: bold;
   padding: 7px 14px;
   border-radius: 20px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #604236;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .catalog-grid {
@@ -87,19 +84,18 @@ main {
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid #dec28a;
-  box-shadow: 0 3px 10px rgba(91, 49, 40, 0.12);
-  transition: 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .catalogo-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(91, 49, 40, 0.2);
+  box-shadow: 0 5px 14px rgba(91, 49, 40, 0.18);
 }
 
 .image-box {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 195px;
   overflow: hidden;
 }
 
@@ -118,7 +114,7 @@ main {
   background: #7a2430;
   color: white;
   padding: 6px 10px;
-  border-radius: 12px;
+  border-radius: 8px;
   font-size: 12px;
   font-weight: bold;
 }
@@ -134,14 +130,14 @@ main {
   color: #6f394d;
   font-size: 12px;
   font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 14px;
+  padding: 5px 9px;
+  border-radius: 10px;
   text-transform: capitalize;
 }
 
 .event-info h3 {
   margin: 10px 0;
-  font-size: 19px;
+  font-size: 18px;
   color: #5b3128;
 }
 
@@ -156,7 +152,7 @@ button {
   margin-top: 12px;
   height: 40px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #c29b4b;
   color: white;
   font-weight: bold;
@@ -171,8 +167,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-width: 650px;
-  margin: 0 auto;
 }
 
 .form-box label {
@@ -190,7 +184,7 @@ button:hover {
 .form-box input,
 .form-box textarea {
   border: 1px solid #c9a35b;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 10px;
   font-family: Arial, sans-serif;
   background: white;
@@ -216,7 +210,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(40, 25, 20, 0.72);
+  background-color: rgba(43, 25, 20, 0.72);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,15 +219,15 @@ button:hover {
 }
 
 .modal-content {
-  background: #fffaf0;
+  background-color: #fffaf0;
   border-radius: 16px;
   width: 95%;
-  max-width: 800px;
+  max-width: 780px;
   max-height: 88vh;
   overflow-y: auto;
   padding: 22px;
   border: 1px solid #c29b4b;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
 }
 
 .close-btn {
@@ -261,8 +255,9 @@ button:hover {
   height: 170px;
   object-fit: cover;
   object-position: center;
-  border-radius: 12px;
+  border-radius: 10px;
   display: block;
+  border: 1px solid #dec28a;
 }
 
 .modal-details h2 {
@@ -279,8 +274,8 @@ button:hover {
 
 .detail-list {
   background: white;
-  padding: 14px;
-  border-radius: 12px;
+  padding: 12px;
+  border-radius: 10px;
   border: 1px solid #dec28a;
 }
 
@@ -307,7 +302,7 @@ footer {
 
 @media (min-width: 900px) {
   .catalog-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .modal-gallery {

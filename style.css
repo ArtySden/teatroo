@@ -6,6 +6,8 @@ body {
   font-family: Arial, sans-serif;
   background: #ececec;
   color: #222;
+  margin: 0;
+  padding: 20px;
 }
 
 button {
@@ -20,6 +22,10 @@ button {
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+button:hover {
+  background: #e87532;
 }
 
 .card {
@@ -67,6 +73,7 @@ button {
   grid-template-columns: 1fr;
   gap: 15px;
 }
+
 .program-item {
   display: flex;
   gap: 10px;
@@ -82,21 +89,34 @@ button {
   gap: 10px;
   margin-bottom: 16px;
 }
+
 .form-box label {
   display: grid;
   grid-template-columns: 85px 1fr;
   align-items: center;
   gap: 8px;
 }
+
 .form-box span {
   font-size: 12px;
 }
-.form-box input {
-  height: 28px;
+
+.form-box input,
+.form-box textarea {
   border: 1px solid #b9b2b2;
   border-radius: 10px;
-  padding: 0 10px;
+  padding: 8px 10px;
   background: #f9f6f6;
+  font-family: Arial, sans-serif;
+}
+
+.form-box input {
+  height: 32px;
+}
+
+.form-box textarea {
+  min-height: 80px;
+  resize: vertical;
 }
 
 .promo-image {
@@ -106,32 +126,44 @@ button {
   margin: 10px 0 16px;
 }
 
-/* 📱 Mobile ajustes */
-@media (max-width: 600px) {
-}
-
-/* 💻 Desktop → 3 columnas */
-@media (min-width: 768px) {
-}
-
-/* Estilo de la cuadrícula de películas */
+/* Catálogo */
 .catalog-grid {
-  display: grid; /* Usa grid layout */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(150px, 1fr)
-  ); /* Columnas adaptables */
-  gap: 10px; /* Espaciado entre elementos */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
 }
 
-/* Estilo de las imágenes de las películas */
+.catalogo-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .catalogo-item img {
-  width: 100%; /* Ancho completo */
-  border-radius: 5px; /* Bordes redondeados */
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
 }
 
-/* Estilo del modal */
-/* Estilos para el modal */
+.movie-info,
+.event-info {
+  padding: 10px;
+}
+
+.movie-info h3,
+.event-info h3 {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.movie-info p,
+.event-info p {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
 /* Ocultar modal */
 .hidden {
   display: none !important;
@@ -149,33 +181,126 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 20px;
+  z-index: 1000;
 }
 
 /* Caja del modal */
 .modal-content {
   background-color: #fff;
   border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
+  width: 95%;
+  max-width: 750px;
+  max-height: 85vh;
+  overflow-y: auto;
   padding: 20px;
 }
 
 /* Botón cerrar */
 .close-btn {
   float: right;
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: bold;
   cursor: pointer;
+  color: #333;
 }
 
-/* Imagen */
+.close-btn:hover {
+  color: #f68d4e;
+}
+
+/* Galería del modal */
+.modal-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 20px 0 18px 0;
+  clear: both;
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Por si tu HTML usa todavía modal-image */
 .modal-image img {
-  max-width: 100%;
-  border-radius: 8px;
+  width: 100%;
+  max-height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
 }
 
-/* Texto */
+/* Texto del modal */
 .modal-details h2 {
   margin-top: 10px;
-  font-size: small;
+  font-size: 20px;
   color: #f68d4e;
+}
+
+.modal-details p {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.detail-list {
+  background: #f3f3f3;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+.detail-list p {
+  margin: 6px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 88vh;
+    padding: 15px;
+  }
+
+  .modal-gallery img {
+    height: 120px;
+  }
+}
+
+/* Tablet y PC */
+@media (min-width: 600px) {
+  .modal-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .modal-gallery img {
+    height: 130px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

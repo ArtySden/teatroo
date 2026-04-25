@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ececec;
+  color: #222;
+}
+
+button {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #f68d4e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.card {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.badge {
+  display: inline-block;
+  background: #f0d44e;
+  color: #111;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.info-row .info-item {
+  flex: 1 1 100px;
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.program-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+.program-item {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #b9b2b2;
+  border-radius: 8px;
+  padding: 8px;
+  background: #f2eded;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.form-box label {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+.form-box span {
+  font-size: 12px;
+}
+.form-box input {
+  height: 28px;
+  border: 1px solid #b9b2b2;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: #f9f6f6;
+}
+
+.promo-image {
+  width: 100%;
+  height: 105px;
+  object-fit: cover;
+  margin: 10px 0 16px;
+}
+
+/* 📱 Mobile ajustes */
+@media (max-width: 600px) {
+}
+
+/* 💻 Desktop → 3 columnas */
+@media (min-width: 768px) {
+}
+
+/* Estilo de la cuadrícula de películas */
+.catalog-grid {
+  display: grid; /* Usa grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Columnas adaptables */
+  gap: 10px; /* Espaciado entre elementos */
+}
+
+/* Estilo de las imágenes de las películas */
+.catalogo-item img {
+  width: 100%; /* Ancho completo */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo del modal */
+/* Estilos para el modal */
+/* Ocultar modal */
+.hidden {
+  display: none !important;
+}
+
+/* Fondo del modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja del modal */
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Botón cerrar */
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Imagen */
+.modal-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Texto */
+.modal-details h2 {
+  margin-top: 10px;
+  font-size: small;
+  color: #f68d4e;
+}

@@ -32,7 +32,7 @@ function mostrarCatalogo(catalogoData) {
 
     catalogoItem.innerHTML = `
       <div class="image-box">
-        <img src="${evento.images[0]}" alt="${evento.title}" onerror="this.src='imagen1.jpg'" />
+        <img src="${evento.images[0]}" alt="${evento.title}" />
         ${evento.soldOut ? `<span class="sold-out">Sold Out</span>` : ""}
       </div>
 
@@ -67,7 +67,7 @@ function mostrarDetalles(id) {
   modalGallery.innerHTML = evento.images
     .map(
       (imagen) => `
-        <img src="${imagen}" alt="Imagen de ${evento.title}" onerror="this.src='imagen1.jpg'" />
+        <img src="${imagen}" alt="Imagen de ${evento.title}" />
       `
     )
     .join("");

@@ -1,55 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Eventos</title>
+    <title>Cartelera de Eventos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <main>
-      <article class="card">
-        <div class="badge">Evento Especial</div>
-        <h1>Fundamentos<br />de Diseño</h1>
-        <p class="description">
-          Una semana intensiva para dominar los principios del diseño. ¡Aprende,
-          crea y diviertete!
-        </p>
-        <div class="info-row">
-          <div class="info-item">
-            <span>Fecha</span>
-            <strong>24 Marzo</strong>
-          </div>
-          <div class="info-item">
-            <span>Lugar</span>
-            <strong>Aula Magna</strong>
-          </div>
-          <div class="info-item">
-            <span>Cupos</span>
-            <strong>50</strong>
-          </div>
-        </div>
-        <h3>Catalogo</h3>
-        <div class="catalog-grid"></div>
 
-        <!-- Modal  -->
-        <div id="movieModal" class="modal hidden">
-          <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="modal-body">
-              <div class="modal-image">
-                <img id="modalImage" src="" alt="" />
-              </div>
-              <div class="modal-details">
-                <h2 id="modalDescription"></h2>
+  <body>
+    <header>
+      <h1>Cartelera de Eventos</h1>
+      <p>Encuentra conciertos, teatro, festivales y más actividades.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="badge">Eventos Disponibles</div>
+
+        <h2>Catálogo</h2>
+        <p class="description">
+          Explora los próximos eventos disponibles y revisa sus detalles.
+        </p>
+
+        <div class="catalog-grid"></div>
+      </section>
+
+      <section class="card contact-card">
+        <div class="badge">Contacto</div>
+
+        <h2>Formulario de consulta</h2>
+        <p class="description">
+          Completa tus datos para enviar una consulta sobre los eventos.
+        </p>
+
+        <form id="contactForm" class="form-box">
+          <label>
+            <span>Nombre</span>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre" />
+          </label>
+
+          <label>
+            <span>Correo</span>
+            <input type="email" id="correo" placeholder="correo@ejemplo.com" />
+          </label>
+
+          <label>
+            <span>Consulta</span>
+            <textarea
+              id="consulta"
+              placeholder="Escribe tu consulta"
+            ></textarea>
+          </label>
+
+          <button type="submit">Enviar</button>
+          <p id="mensajeForm"></p>
+        </form>
+      </section>
+
+      <!-- Modal de detalle -->
+      <div id="eventModal" class="modal hidden">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+
+          <div class="modal-body">
+            <div class="modal-gallery" id="modalGallery"></div>
+
+            <div class="modal-details">
+              <h2 id="modalTitle"></h2>
+              <p id="modalDescription"></p>
+
+              <div class="detail-list">
+                <p><strong>Categoría:</strong> <span id="modalCategory"></span></p>
+                <p><strong>Artistas:</strong> <span id="modalArtists"></span></p>
+                <p><strong>Lugar:</strong> <span id="modalVenue"></span></p>
+                <p><strong>Fecha:</strong> <span id="modalDate"></span></p>
+                <p><strong>Precio:</strong> <span id="modalPrice"></span></p>
+                <p><strong>Cupos:</strong> <span id="modalStock"></span></p>
+                <p><strong>Edad:</strong> <span id="modalAge"></span></p>
+                <p><strong>Reembolso:</strong> <span id="modalRefund"></span></p>
               </div>
             </div>
           </div>
         </div>
-      </article>
+      </div>
     </main>
+
     <footer>
-      <p>Copyright © 2024</p>
+      <p>Copyright © 2026 - Cartelera de Eventos</p>
     </footer>
 
     <script src="script.js"></script>

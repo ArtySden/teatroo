@@ -78,25 +78,5 @@
       "refund": "Reembolso hasta 72 horas antes del evento"
     },
     "description": "Una obra teatral dramática que presenta una historia familiar llena de secretos, recuerdos y decisiones difíciles. Cuenta con escenografía clásica y actuaciones intensas."
-  },
-  {
-  "id": "evt-0005",
-  "title": "Festival Furro: Noche de Garras y Ritmo",
-  "category": "festival",
-  "artists": ["Sonic", "Lola Bunny", "Adam Wan"],
-  "city": "Lima",
-  "venue": "Estadio Nacional",
-  "datetime": "2025-11-20T18:00:00-05:00",
-  "priceFrom": 30.00,
-  "currency": "PEN",
-  "stock": 3000,
-  "soldOut": false,
-  "popularity": 95,
-  "images": ["imagen5.jpg"],
-  "policies": {
-    "age": "15+",
-    "refund": "No reembolsable"
-  },
-  "description": "Una noche de música, luces y diversión inspirada en la cultura furry. El evento contará con presentaciones en vivo, zonas para fotografías, concursos de cosplay, pantallas gigantes y un ambiente lleno de energía para quienes disfrutan los personajes animados y la fantasía."
-}
+  }
 ]

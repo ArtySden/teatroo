@@ -13,10 +13,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch("events.json");
+
+    if (!response.ok) {
+      throw new Error("No se encontró el archivo events.json");
+    }
+
     catalogoData = await response.json();
     mostrarCatalogo(catalogoData);
   } catch (error) {
     console.error("Error cargando el catálogo:", error);
+
+    document.querySelector(".catalog-grid").innerHTML = `
+      <p style="color: red; font-weight: bold;">
+        No se pudo cargar el catálogo. Revisa que el archivo events.json esté bien escrito y en la misma carpeta.
+      </p>
+    `;
   }
 
   activarFormulario();
@@ -79,9 +90,7 @@ function mostrarDetalles(id) {
   document.getElementById("modalVenue").textContent = `${evento.venue}, ${evento.city}`;
   document.getElementById("modalDate").textContent = formatearFecha(evento.datetime);
   document.getElementById("modalPrice").textContent = `${evento.currency} ${evento.priceFrom.toFixed(2)}`;
-  document.getElementById("modalStock").textContent = evento.soldOut
-    ? "Agotado"
-    : evento.stock;
+  document.getElementById("modalStock").textContent = evento.soldOut ? "Agotado" : evento.stock;
   document.getElementById("modalAge").textContent = evento.policies.age;
   document.getElementById("modalRefund").textContent = evento.policies.refund;
 

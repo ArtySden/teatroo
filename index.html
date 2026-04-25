@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página principal de demostración" />
+    <title>FundemoWeb</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f4f6f9;
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ── Header & Nav ── */
+      header {
+        background: #2c3e50;
+        color: #fff;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #1abc9c;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        font-size: 0.95rem;
+        padding: 0.25rem 0;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.2s, color 0.2s;
+      }
+
+      nav a:hover {
+        color: #1abc9c;
+        border-color: #1abc9c;
+      }
+
+      /* ── Layout ── */
+      .container {
+        max-width: 1100px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+        width: 100%;
+        flex: 1;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 280px;
+        gap: 1.5rem;
+      }
+
+      /* ── Section intro ── */
+      section.intro {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid #1abc9c;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+        color: #555;
+      }
+
+      /* ── Articles ── */
+      .articles {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      article {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        transition: box-shadow 0.2s;
+      }
+
+      article:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+
+      article h2 {
+        font-size: 1.15rem;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
+
+      article p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #666;
+      }
+
+      /* ── Aside ── */
+      aside {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        height: fit-content;
+      }
+
+      aside h3 {
+        font-size: 1rem;
+        color: #2c3e50;
+        margin-bottom: 0.75rem;
+        border-bottom: 2px solid #1abc9c;
+        padding-bottom: 0.4rem;
+      }
+
+      aside ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      aside ul li::before {
+        content: "›";
+        color: #1abc9c;
+        font-weight: 700;
+        margin-right: 0.4rem;
+      }
+
+      aside ul li {
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      /* ── Footer ── */
+      footer {
+        background: #2c3e50;
+        color: #bdc3c7;
+        text-align: center;
+        padding: 1rem 2rem;
+        font-size: 0.85rem;
+        margin-top: auto;
+      }
+
+      footer address {
+        font-style: normal;
+        margin-top: 0.25rem;
+      }
+
+      footer a {
+        color: #1abc9c;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 700px) {
+        .content-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="logo">FundemoWeb</div>
+      <nav>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/link">Página</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="intro">
+        Un grupo de contenido relacionado que sirve como introducción a la
+        página.
+      </section>
+
+      <div class="content-grid">
+        <main class="articles">
+          <article>
+            <h2>Título 1</h2>
+            <p>
+              Contenido del primer artículo. Aquí puedes añadir texto
+              descriptivo, imágenes o cualquier otro elemento relevante para
+              este tema.
+            </p>
+          </article>
+          <article>
+            <h2>Título 2</h2>
+            <p>
+              Contenido del segundo artículo. Este espacio está pensado para
+              ampliar la información con detalles adicionales o secciones
+              secundarias.
+            </p>
+          </article>
+        </main>
+
+        <aside>
+          <h3>Sidebar</h3>
+          <ul>
+            <li><a href="pagina0.html">Basica</a></li>
+            <li><a href="pagina1.html">Intermedia</a></li>
+            <li><a href="pagina2.html">Intermedia CSS + Formulario</a></li>
+            <li><a href="pagina3.html">Intermedia +CSS</a></li>
+            <li><a href="pagina1rwd.html">Avanzada Responsive</a></li>
+            <li><a href="pagina1rwd.html">Avanzada Javascript</a></li>
+            <li>
+              <a href="paginacatalogo.html"
+                >Catalogo Javascript + CSS + Responsive</a
+              >
+            </li>
+            <li>
+              <a href="game.html">Game JS + CSS </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 FundemoWeb</p>
+      <address>
+        Contacto: <a href="mailto:me@html6.com">me@html6.com</a>
+      </address>
+    </footer>
+  </body>
+</html>

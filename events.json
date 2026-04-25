@@ -12,11 +12,7 @@
     "stock": 30000,
     "soldOut": false,
     "popularity": 95,
-    "images": [
-      "assets/evt-0001/cover.jpg",
-      "assets/evt-0001/img1.jpg",
-      "assets/evt-0001/img2.jpg"
-    ],
+    "images": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg"],
     "policies": {
       "age": "18+",
       "refund": "No reembolsable"
@@ -36,11 +32,7 @@
     "stock": 1200,
     "soldOut": false,
     "popularity": 88,
-    "images": [
-      "assets/evt-0002/cover.jpg",
-      "assets/evt-0002/img1.jpg",
-      "assets/evt-0002/img2.jpg"
-    ],
+    "images": ["imagen2.jpg", "imagen3.jpg", "imagen4.jpg"],
     "policies": {
       "age": "Todas las edades",
       "refund": "Reembolso hasta 48 horas antes del evento"
@@ -60,11 +52,7 @@
     "stock": 400,
     "soldOut": false,
     "popularity": 80,
-    "images": [
-      "assets/evt-0003/cover.jpg",
-      "assets/evt-0003/img1.jpg",
-      "assets/evt-0003/img2.jpg"
-    ],
+    "images": ["imagen3.jpg", "imagen1.jpg", "imagen4.jpg"],
     "policies": {
       "age": "16+",
       "refund": "No reembolsable"
@@ -84,11 +72,7 @@
     "stock": 0,
     "soldOut": true,
     "popularity": 84,
-    "images": [
-      "assets/evt-0004/cover.jpg",
-      "assets/evt-0004/img1.jpg",
-      "assets/evt-0004/img2.jpg"
-    ],
+    "images": ["imagen4.jpg", "imagen2.jpg", "imagen1.jpg"],
     "policies": {
       "age": "12+",
       "refund": "Reembolso hasta 72 horas antes del evento"
